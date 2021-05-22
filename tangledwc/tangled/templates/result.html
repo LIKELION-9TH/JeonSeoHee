@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color : bisque;
+        }
+        h1{
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>입력한 텍스트 </h1>
+    <p>{{full}}</p>
+
+    <h2> 단어 카운트 : </h2>
+    {% for word, count in dictionary %}
+
+    <h3>{{word}}</h3>
+    {{word}} : {{count}}개
+
+    <br>
+
+    {% endfor %}
+
+    <h1>{{total}}개의 단어</h1>
+    <br>
+    <a href="{% url 'main' %}"> 다시 하기 </a>
+</body>
+</html>
+
+
+
